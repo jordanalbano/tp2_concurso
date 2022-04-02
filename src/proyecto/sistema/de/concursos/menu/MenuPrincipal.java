@@ -2,9 +2,9 @@ package proyecto.sistema.de.concursos.menu;
 
 import java.time.LocalDate;
 
-
 import proyecto.sistema.de.concursos.modelo.Concurso;
 import proyecto.sistema.de.concursos.modelo.Participante;
+import proyecto.sistema.de.concursos.persistencia.EnDiscoRegistroDeInscripcion;
 
 public class MenuPrincipal {
 	public static void main(String[] args) {
@@ -14,11 +14,12 @@ public class MenuPrincipal {
 		 * 10),LocalDate.of(2022,3,12)); boolean b = cd.estaEnRangoDeInscripcion();
 		 * System.out.println(b);
 		 */
-		Concurso miConcurso = new Concurso(1, "des", "nombre", LocalDate.of(2022, 1, 1),10);
+		Concurso miConcurso = new Concurso(1, "des", "nombre", LocalDate.of(2022, 1, 1), 10,
+				new EnDiscoRegistroDeInscripcion());
 		Participante participante = new Participante(1, "jo", "as", 123312, 20);
 
 		// testear- invocar para ver si anda o no
-		miConcurso.inscribirse(participante);
+		// miConcurso.inscribirse(participante);
 
 		// verificar
 		boolean esta = miConcurso.estaInscripto(participante);
