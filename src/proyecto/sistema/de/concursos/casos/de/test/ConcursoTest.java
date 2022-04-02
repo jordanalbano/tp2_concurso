@@ -16,7 +16,7 @@ public class ConcursoTest {
 	@Test
 	public void inscripcionEnConcurso()
 			throws ExcepcionPorParticipanteInscripto, ExcepcionPorNoEstarEnRango, AppException {
-		// setup
+		// setup//
 		EnMemoriaRegistroDeInscripcion enMemoria = new EnMemoriaRegistroDeInscripcion();
 		Concurso turismoAhora = new Concurso(1, "turismo", "ahora", LocalDate.of(2022, 3, 1), 30, enMemoria);
 		Participante claudio = new Participante(2, "claudio", "sejac", 123312, 26);
