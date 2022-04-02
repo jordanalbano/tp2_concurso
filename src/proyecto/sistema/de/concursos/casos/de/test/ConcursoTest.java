@@ -24,10 +24,11 @@ public class ConcursoTest {
 		// testear- invocar para ver si anda o no
 		turismoAhora.inscribirse(claudio);
 
-		// verificar
+		// verificar//
 		// Optional<String> stringEnMemoria = turismoAhora.encontrar();
 		assertEquals("claudio||2022-04-02||1", enMemoria.encontrar().get());
 		// el primero es el esperado
+
 	}
 
 	/*
